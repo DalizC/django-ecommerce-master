@@ -9,6 +9,8 @@ INSTALLED_APPS += [
 
 MIDDLEWARE += ['debug_toolbar.middleware.DebugToolbarMiddleware', ]
 
+CORS_ORIGIN_ALLOW_ALL = True
+
 # DEBUG TOOLBAR SETTINGS
 
 DEBUG_TOOLBAR_PANELS = [
