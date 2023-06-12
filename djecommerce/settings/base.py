@@ -3,6 +3,7 @@ from decouple import config
 
 BASE_DIR = os.path.dirname(os.path.dirname(
     os.path.dirname(os.path.abspath(__file__))))
+STRIPE_TEST_PUBLIC_KEY = 'valor_predeterminado'
 
 SECRET_KEY = config('SECRET_KEY')
 
@@ -13,18 +14,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'rest_framework',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'crispy_forms',
-    'crispy_bootstrap4',
     'django_countries',
-
-    'core'
+    #'debug_toolbar',
+    'core',
+    'bootstrap4',
 ]
-
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -33,6 +34,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'djecommerce.urls'
@@ -55,7 +57,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'djecommerce.wsgi.application'
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
@@ -80,4 +82,4 @@ LOGIN_REDIRECT_URL = '/'
 
 # CRISPY FORMS
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
