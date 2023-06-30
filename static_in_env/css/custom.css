@@ -21,3 +21,17 @@
         font-weight: bold;
     }
 }
+
+.bg-primary-dark {
+    background-color: #000000;
+}
+
+.header-options a {
+    color: #E8E8E8;
+}
+
+#form1 {
+    color: #E8E8E8;
+}
+
+#navbarLeftAlignExample {}

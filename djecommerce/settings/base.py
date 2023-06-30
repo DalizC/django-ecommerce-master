@@ -1,8 +1,11 @@
+import json
 import os
 from decouple import config
 
 BASE_DIR = os.path.dirname(os.path.dirname(
     os.path.dirname(os.path.abspath(__file__))))
+
+
 STRIPE_TEST_PUBLIC_KEY = 'valor_predeterminado'
 
 SECRET_KEY = config('SECRET_KEY')
